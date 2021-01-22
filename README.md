@@ -1,11 +1,10 @@
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
 ## Réservation des Vols
 
 Réservation des Vols Chez SafiAir
 
 ![Réservation des Vols](https://economictimes.indiatimes.com/thumb/msid-75181333,width-1600,height-900,resizemode-4/industry/transportation/airlines-/-aviation/those-who-booked-flight-tickets-during-mar-25-apr-14-for-travel-till-may-3-can-get-refunds-govt.jpg)
+
+## Table des matières
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">

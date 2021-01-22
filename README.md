@@ -1,8 +1,31 @@
+[![MIT License][license-shield]][https://github.com/yassinecherkaoui/nodejs_reservation_des_vols/blob/main/license]
+[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/cherkaouiya/]
+
 ## Réservation des Vols
 
 Réservation des Vols Chez SafiAir
 
 ![Réservation des Vols](https://economictimes.indiatimes.com/thumb/msid-75181333,width-1600,height-900,resizemode-4/industry/transportation/airlines-/-aviation/those-who-booked-flight-tickets-during-mar-25-apr-14-for-travel-till-may-3-can-get-refunds-govt.jpg)
+
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary>Table des matières</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">Contexte du projet</a>
+    </li>
+    <li>
+      <a href="#getting-started">Modalités pédagogiques</a>
+    </li>
+    <li><a href="#usage">Livrables</a></li>
+    <li><a href="#roadmap">Capture d'écran de l'application</a></li>
+    <li><a href="#contributing">Référentiels</a></li>
+    <li><a href="#license">technologies utilisées</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">COMMENT COURIR !!</a></li>
+    <li><a href="#acknowledgements">Author</a></li>
+  </ol>
+</details>
 
 ## Contexte du projet
 
@@ -23,7 +46,7 @@ Deadline 1 Février 2021
 
 Lien Github de votre application web et base de données
 
-# Capture d'écran de l'application
+## Capture d'écran de l'application
 
 ![]()
 
@@ -41,6 +64,10 @@ MySQL
 GIT
 Pédagogie active
 
+## License
+
+Distributed under the MIT License. See LICENSE for more information.
+
 ## COMMENT COURIR !!
 
 ```bash
@@ -50,8 +77,6 @@ Pour Exécuter ce Projet, vous devez suivre ces étapes :
 Étape 2: Extraire le fichier.
 Étape 3: Ouvrez le dossier avec Nimporte quel IDE (VScode / notepad .....)
 Étape 4: installez node-module avec cette commande << npm install --save >>.
-```
-
 ```
 
 Maintenant, les étapes suivantes comment connecter la base de données
@@ -66,15 +91,14 @@ Maintenant, les étapes suivantes comment connecter la base de données
 
 ```
 
+```
 Étape 11: Ouvrez le Terminal et appuyez sur npm start
 
     ## Enjoy
 
 ```
 
-```
-
-```
+start app via https://localhost:3000/
 
 ## Author
 

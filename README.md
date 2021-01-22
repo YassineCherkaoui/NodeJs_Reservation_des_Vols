@@ -27,6 +27,20 @@ Lien Github de votre application web et base de données
 
 ![]()
 
+## Référentiels
+
+Développeur⋅se web et web mobile
+Concepteur⋅rice développeur⋅se d'applications
+
+## Prérequis (technologies utilisées)
+
+Node.js
+HTML5/CSS3
+JavaScript
+MySQL
+GIT
+Pédagogie active
+
 ## COMMENT COURIR !!
 
 ```bash
@@ -61,3 +75,7 @@ Maintenant, les étapes suivantes comment connecter la base de données
 ```
 
 ```
+
+## Author
+
+Yassine Cherkaoui

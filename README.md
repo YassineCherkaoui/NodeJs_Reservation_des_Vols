@@ -1,5 +1,5 @@
-[![MIT License][license-shield]][https://github.com/yassinecherkaoui/nodejs_reservation_des_vols/blob/main/license]
-[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/cherkaouiya/]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
 ## Réservation des Vols
 
@@ -12,18 +12,18 @@ Réservation des Vols Chez SafiAir
   <summary>Table des matières</summary>
   <ol>
     <li>
-      <a href="#about-the-project">Contexte du projet</a>
+      <a href="#Contexte-du-projet">Contexte du projet</a>
     </li>
     <li>
-      <a href="#getting-started">Modalités pédagogiques</a>
+      <a href="#Modalités-pédagogiques">Modalités pédagogiques</a>
     </li>
-    <li><a href="#usage">Livrables</a></li>
-    <li><a href="#roadmap">Capture d'écran de l'application</a></li>
-    <li><a href="#contributing">Référentiels</a></li>
-    <li><a href="#license">technologies utilisées</a></li>
+    <li><a href="#Livrables">Livrables</a></li>
+    <li><a href="#Capture-d'écran-de-l'application">Capture d'écran de l'application</a></li>
+    <li><a href="#Référentiels">Référentiels</a></li>
+    <li><a href="#technologies-utilisées">technologies utilisées</a></li>
     <li><a href="#license">License</a></li>
-    <li><a href="#contact">COMMENT COURIR !!</a></li>
-    <li><a href="#acknowledgements">Author</a></li>
+    <li><a href="#COMMENT-COURIR">COMMENT COURIR !!</a></li>
+    <li><a href="#Author">Author</a></li>
   </ol>
 </details>
 

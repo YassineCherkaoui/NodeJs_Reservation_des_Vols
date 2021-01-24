@@ -35,71 +35,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-5 col-md-offset-1">
-                    <section id="first-tab-group" class="tabgroup">
-                        <div id="tab1">
-                            <div class="submit-form">
-                                <h4>Check availability for <em>direction</em>:</h4>
-                                <form id="form-submit" action="" method="get">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <fieldset>
-                                                <label for="from">From:</label>
-                                                <select required name='from'>
-                                                    <option value="">Select a location...</option>
-                                                    <% rows.forEach(function(row){ %>
-                                                        <option value="<%= row.name_c %>"><%= row.departure %></option>
-                                                        <% }); %>
-                                                </select>
-                                            </fieldset>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <fieldset>
-                                                <label for="to">To:</label>
-                                                <select required name='to'>
-                                                    <option value="">Select a location...</option>
-                                                    <% rows.forEach(function(row){ %>
-                                                    <option value="<%= row.name_c %>"><%= row.destination %></option>
-                                                    <% }); %>
-                                                </select>
-                                            </fieldset>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <fieldset>
-                                                <label for="departure">Departure date:</label>
-                                                <input name="deparure" type="text" class="form-control date" id="deparure" placeholder="Select date..." required="" >
-                                            </fieldset>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <fieldset>
-                                                <label for="return">Return date:</label>
-                                                <input name="return" type="text" class="form-control date" id="return" placeholder="Select date..." required="">
-                                            </fieldset>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="radio-select">
-                                                <div class="row">
-                                                    <div class="col-md-6 col-sm-6 col-xs-6">
-                                                        <label for="round">Round</label>
-                                                        <input type="radio" name="trip" id="round" value="round" required="required">
-                                                    </div>
-                                                    <div class="col-md-6 col-sm-6 col-xs-6">
-                                                        <label for="oneway">Oneway</label>
-                                                        <input type="radio" name="trip" id="oneway" value="one-way" required="required"onchange='this.form.()'>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <fieldset>
-                                                <button type="submit" id="form-submit" class="btn">Order Ticket Now</button>
-                                            </fieldset>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </section>
                 </div>
             </div>
         </div>
@@ -107,11 +42,64 @@
 
 
     
-<div class="blink" style="margin-top: 30%;"></div>
+    <div class="blink" style="margin-top: 2%;"></div>
 
 <!-- <a href="/product/addProduct" type="button" class="btn btn-outline-success">Add Product</a>
 <a href="/category" type="button" class="btn btn-outline-success">Category List</a> -->
+<!-- Start Feature Area -->
+<section class="featured-area">
 
+    <div class="container">
+        <section id="main-content">
+            <section class="wrapper"><br>
+                <div class="row">
+                    <!-- page start-->
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Air Réf</th>
+                                <th scope="col">Departure</th>
+                                <th scope="col">Destination</th>
+                                <th scope="col">Start date</th>
+                                <th scope="col">Start date</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Choose</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% rows.forEach(function(row){ %>
+                                <tr>
+                                    <th scope="row"><%= row.id_flight %>
+                                    </th>
+                                    <td>
+                                        <%= row.departure %>
+                                    </td>
+                                    <td>
+                                        <%= row.destination %>
+                                    </td>
+                                    <td>
+                                        <%= row.start_date %>
+                                    </td>
+                                    <td>
+                                        <%= row.num_place %>
+                                    </td>
+                                    <td>
+                                        <%= row.price %>
+                                    </td>
+                                    <td class="center hidden-phone">
+                                        <a href="/Client/Reserve/<%= row.id_flight %>" class="btn btn-outline btn-sm">Order Ticket Now</a>
+                                </tr>
+                                <% }); %>
+                        </tbody>
+                    </table>
+                </div>
+    </div>
+</div>
+</section>
+</section>
+</div>
+</section>
+<div class="blink" style="margin-top: 2%;"></div>
 
     <footer>
         <div class="container">

@@ -35,6 +35,69 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-md-5 col-md-offset-1">
+                    <section id="first-tab-group" class="tabgroup">
+                        <div id="tab1">
+                            <div class="submit-form">
+                                <h4>Check availability for <em>direction</em>:</h4>
+                                <form id="form-submit" action="/view" method="POST">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <fieldset>
+                                                <label for="from">Départ:</label>
+                                                <input name="Départ" type="text" class="form-control date" id="Départ" placeholder="tapez l'emplacement de Départ..." required>
+                                                </select>
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <fieldset>
+                                                <label for="from">Arrivé:</label>
+                                                <input name="Arrivé" type="text" class="form-control date" id="Arrivé" placeholder="tapez l'emplacement d'Arrivé..." required>
+                                                </select>
+                                            </fieldset>
+                                        </div>
+                                        <!-- <div class="col-md-6">
+                                            <fieldset>
+                                                <label for="from">l’heure départ:</label>
+                                                <input name="heure_départ" type="text" class="form-control date" id="heure_départ" placeholder="Sélectionner heure départ..." required>
+                                                </select>
+                                            </fieldset>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <fieldset>
+                                                <label for="return">l’heure d’arrivé:</label>
+                                                <input name="heure_arrivé" type="text" class="form-control date" id="heure_arrivé" placeholder="Sélectionner heure Arrivé..." required>
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <fieldset>
+                                                <label for="return">date de départ:</label>
+                                                <input name="date_départ" type="text" class="form-control date" id="date_départ" placeholder="Sélectionner date départ..." required>
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <fieldset>
+                                                <label for="return">date d'Arrivé:</label>
+                                                <input name="date_arrivé" type="text" class="form-control date" id="date_arrivé" placeholder="Sélectionner date d'arrivé..." required>
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <fieldset>
+                                                <label for="return">Nombre de places:</label>
+                                                <input name="num_place" type="text" class="form-control date" id="num_place" placeholder="Sélectionner numbre place..." required>
+                                            </fieldset>
+                                        </div> -->
+                                        <div class="col-md-6">
+                                            <fieldset>
+                                                <button type="submit" id="form-submit" class="btn">Check</button>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>
@@ -43,51 +106,29 @@
 
     
     <div class="blink" style="margin-top: 2%;"></div>
-
-<!-- <a href="/product/addProduct" type="button" class="btn btn-outline-success">Add Product</a>
-<a href="/category" type="button" class="btn btn-outline-success">Category List</a> -->
-<!-- Start Feature Area -->
 <section class="featured-area">
 
     <div class="container">
         <section id="main-content">
             <section class="wrapper"><br>
                 <div class="row">
-                    <!-- page start-->
                     <table class="table">
                         <thead>
                             <tr>
                                 <th scope="col">Air Réf</th>
                                 <th scope="col">Departure</th>
-                                <th scope="col">Destination</th>
-                                <th scope="col">Start date</th>
-                                <th scope="col">Start date</th>
-                                <th scope="col">Price</th>
-                                <th scope="col">Choose</th>
                             </tr>
                         </thead>
                         <tbody>
                             <% rows.forEach(function(row){ %>
                                 <tr>
-                                    <th scope="row"><%= row.id_flight %>
+                                    <th scope="row"><%= row.Départ %>
                                     </th>
                                     <td>
-                                        <%= row.departure %>
-                                    </td>
-                                    <td>
-                                        <%= row.destination %>
-                                    </td>
-                                    <td>
-                                        <%= row.start_date %>
-                                    </td>
-                                    <td>
-                                        <%= row.num_place %>
-                                    </td>
-                                    <td>
-                                        <%= row.price %>
+                                        <%= row.Arrivé %>
                                     </td>
                                     <td class="center hidden-phone">
-                                        <a href="/Client/Reserve/<%= row.id_flight %>" class="btn btn-outline btn-sm">Order Ticket Now</a>
+                                        <a href="/Client/addclient/" class="btn btn-outline btn-sm">Order Ticket Now</a>
                                 </tr>
                                 <% }); %>
                         </tbody>
@@ -103,15 +144,9 @@
 
     <footer>
         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="primary-button">
-                        <a href="#" class="scroll-top">Back To Top</a>
-                    </div>
-                </div>
                 <div class="col-md-12">
                     <ul class="social-icons">
-                        <li><a href="https://www.facebook.com/tooplate"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                         <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                         <li><a href="#"><i class="fa fa-rss"></i></a></li>

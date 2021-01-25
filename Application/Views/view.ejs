@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    	<title>Flight Reservation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/Css/bootstrap.min.css">
+        <link rel="stylesheet" href="/Css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="/Css/fontAwesome.css">
+        <link rel="stylesheet" href="/Css/main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+<body>
+
+    
+    <section class="banner" id="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="left-side">
+                        <div class="logo">
+                            <img src="/img/logo.png" alt="Flight Template">
+                        </div>
+                        <div class="tabs-content">
+                            <h4>Choose Your Direction:</h4>
+                            <ul class="social-links">
+                                <li><a href="http://facebook.com">Find us on <em>Facebook</em><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="http://youtube.com">Our <em>YouTube</em> Channel<i class="fa fa-youtube"></i></a></li>
+                                <li><a href="http://instagram.com">Follow our <em>instagram</em><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+             
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+    <div class="blink" style="margin-top: 2%;"></div>
+<section class="featured-area">
+
+    <div class="container">
+        <section id="main-content">
+            <h1 class="h1 text-center">List Airplane Valaible</h1>
+            <section class="wrapper"><br>
+                <div class="row">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Air Réf</th>
+                                <th scope="col">Departure</th>
+                                <th scope="col">Arrivé</th>
+                                <th scope="col">l’heure départ</th>
+                                <th scope="col">l’heure d’arrivé</th>
+                                <th scope="col">date de départ</th>
+                                <th scope="col">date d'Arrivé</th>
+                                <th scope="col">Nombre de places</th>
+                                <th scope="col">escales</th>
+                                <th scope="col">Order</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% rows.forEach(function(row){ %>
+                                <tr>
+                                    <th scope="row"><%= row.id_airplane %>
+                                    </th>
+                                    <td>
+                                        <%= row.Départ %>
+                                    </td>
+                                    <td>
+                                        <%= row.Arrivé %>
+                                    </td>
+                                    <td>
+                                        <%= row.heure_départ %>
+                                    </td>
+                                    <td>
+                                        <%= row.heure_arrivé %>
+                                    </td>
+                                    <td>
+                                        <%= row.date_départ %>
+                                    </td>
+                                    <td>
+                                        <%= row.date_arrivé %>
+                                    </td>
+                                    <td>
+                                         row.num_place %>
+                                    </td>
+                                    <td>
+                                        <% if(row.escale === 1){ %>
+                                            <p>Escaled</p>
+                                        <% } else{ %>
+                                            <p>Direct(No Escale)</p>
+                                        <% } %>
+                                    </td>
+                                    <td class="center hidden-phone">
+                                        <a href="/Client/addclient/" class="btn btn-outline btn-sm">Order Ticket Now</a>
+                                </tr>
+                                <% }); %>
+                        </tbody>
+                    </table>
+                </div>
+    </div>
+</div>
+</section>
+</section>
+</div>
+</section>
+<div class="blink" style="margin-top: 2%;"></div>
+
+    <footer>
+        <div class="container">
+                <div class="col-md-12">
+                    <ul class="social-icons">
+                        <li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                        <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    
+
+
+    
+</body>
+</html>

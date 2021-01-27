@@ -111,74 +111,10 @@
         </div>
     </div>
     <!-- where_togo_area_end  -->
-    
-    <!-- popular_destination_area_start  -->
-    <div class="popular_destination_area">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="section_title text-center mb_70">
-                        <h3>Vol Details</h3>
-                        
-                    </div>
-                </div>
-                <table class="table table-bordered border-warning">
-                    <thead class="thead-light">
-                        <th>Air Réf</th>
-                        <th>Departure</th>
-                        <th>Arrivé</th>
-                        <th>l’heure départ</th>
-                        <th>l’heure d’arrivé</th>
-                        <th>date de départ</th>
-                        <th>date d'Arrivé</th>
-                        <th>Nombre de places</th>
-                        <th>escales</th>
-                        <th>Order</th>
-                    </thead>
-                    <tbody>
-                        <% rows.forEach(function(row){ %>
-                            <tr>
-                                <th scope="row border"><%= row.id_airplane %>
-                                </th>
-                                <td>
-                                    <%= row.Départ %>
-                                </td>
-                                <td>
-                                    <%= row.Arrivé %>
-                                </td>
-                                <td>
-                                    <%= row.heure_départ %>
-                                </td>
-                                <td>
-                                    <%= row.heure_arrivé %>
-                                </td>
-                                <td>
-                                    <%= row.date_départ %>
-                                </td>
-                                <td>
-                                    <%= row.date_arrivé %>
-                                </td>
-                                <td>
-                                    <%= row.num_place %>
-                                </td>
-                                <td>
-                                    <% if(row.escale === 1){ %>
-                                        <p>Escaled in <%= row.escale_place%></p>
-                                    <% } else{ %>
-                                        <p>Direct(No Escale)</p>
-                                    <% } %>
-                                </td>
-                                <td class="center hidden-phone btn btn-light">
-                                    <a href="/reservation/<%= row.id_airplane %>" class="btn btn-outline btn-sm">Order Ticket Now</a>
-                            </tr>
-                            <% }); %>
-                    </tbody>
-                </table>
-            </div>
-            <div class="row" style="height: 400px;">
-            </div>
-        </div>
-    </div>
+    <h1>THANK YOU YOUR TECKETT HAVE BEEN SELECTED WITH SECCUSFULY</h1>
+    <p>please check ur email if u diden't get any email [don't forget to check spam] call us in </p>
+    <p>+212621114160</p>
+    <p>Have a nice day</p>
     <!-- popular_destination_area_end  -->
    
     <footer class="footer">

@@ -4,16 +4,16 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Travelo</title>
+    <title>MZY</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="/css/style.css">
+    
 </head>
-
 <body>
-    <!-- header-start -->
     <header>
         <div class="header-area ">
             <div id="sticky-header" class="main-header-area">
@@ -22,8 +22,8 @@
                         <div class="row align-items-center">
                             <div class="col-xl-2 col-lg-2">
                                 <div class="logo">
-                                    <a href="home.html">
-                                        <img class="logo" src="img/logo.png" alt="">
+                                    <a href="index.html">
+                                        <img class="logo" src="/img/logo.png" alt="">
                                     </a>
                                 </div>
                             </div>
@@ -60,127 +60,75 @@
             </div>
         </div>
     </header>
-    <!-- header-end -->
+    <div class="destination_banner_wrap overlay">
+        <div class="destination_text text-center">
+            <h3>Saintmartine Iceland</h3>
+            <p>Pixel perfect design with awesome contents</p>
+        </div>
+    </div>
+    <div class="card text-center">
+        <form action="/confirmation/<%= id_airplane %>" method="POST">
+      <div class="card-header">
+            Reservation Détails
+        </div>
+        <div class="card-body">
+            <% rows.forEach(function(row){ %>     
+            <h5 class="card-title">Nom : <%= nom %> </h5>
+            <input type="hidden" name="id_airplane" value="<%= id_airplane %>">
+            <input type="hidden" name="code" value="<%= code %>">
+            <h5 class="card-title">Email : <%= email %></h5>
+            <input type="hidden" name="nom" value="<%= nom %>">
+            <h5 class="card-title">Phone : <%= téléphone %></h5>
+            <input type="hidden" name="prénom" value="<%= prénom %>">
+            <h5 class="card-title">Depart : <%= row.Départ %></h5>
+            <input type="hidden" name="email" value="<%= email %>">
+            <h5 class="card-title">Destination : <%= row.Arrivé %></h5>
+            <input type="hidden" name="téléphone" value="<%= téléphone %>">
+            <h5 class="card-title">Date Time : <%= row.heure_départ %></h5>
+            <input type="hidden" name="Passport" value="<%= Passport %>">
+            <input type="hidden" name="place_reservé" value="<%= place_reservé %>">
+            <h5 class="card-title">Nombre de Place : <%= place_reservé %></h5>
+            <h5 class="card-title">Prix   : <%= row.price * place_reservé %></h5>
+            <button id="confirmé" type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">Confirmé</button>
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">confirmation</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            <script>
+                                               const source = '<div>{{title}}</div>';
+                                    const template = Handlebars.compile(source);
 
-    <!-- slider_area_start -->
-    <div class="slider_area">
-        <div class="slider_active owl-carousel">
-            <div class="single_slider  d-flex align-items-center slider_bg_1 overlay">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-xl-12 col-md-12">
-                            <div class="slider_text text-center">
-                                <h3>Indonesia</h3>
-                                <p>Pixel perfect design with awesome contents</p>
-                                <a href="#" class="boxed-btn3">Explore Now</a>
-                            </div>
-                        </div>
+                                    const contents = template({    
+                                        title: 'Wohooo!'                  
+                                    });
+fs.writeFile('contents.txt', contents, err => {
+    if (err) {
+        return console.error(`Autsch! Failed to store template: ${err.message}.`);
+    }
+});
+                            </script>
+                        </button>
+                    </div> <% }); %>
+                    <div class="modal-body">
+                        Réserver votre billet
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">fermé</button>
+                        <button  type="submit" class="btn btn-warning" >Confirmé</button>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- slider_area_end -->
-
-    <!-- where_togo_area_start  -->
-    <div class="where_togo_area">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-3">
-                    <div class="form_area">
-                        <h3>Where you want to go?</h3>
-                    </div>
-                </div>
-                <div class="col-lg-9">
-                    <div class="search_wrap">
-                        <form action="/view" method="POST">
-                            <div class="input_field" style="margin-right: 70px;">
-                                <input type="text" placeholder="Where to go?" name="Départ">
-                            </div>
-                            <div class="input_field">
-                                <input id="datepicker" placeholder="TO" name="Arrivé">
-                            </div>
-
-                            <div class="search_btn">
-                                <button class="boxed-btn4 " type="submit" >Search</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+            </div>           
         </div>
     </div>
-    <!-- where_togo_area_end  -->
-    
-    <!-- popular_destination_area_start  -->
-    <div class="popular_destination_area">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="section_title text-center mb_70">
-                        <h3>Vol Details</h3>
-                        
-                    </div>
-                </div>
-                <table class="table table-bordered border-warning">
-                    <thead class="thead-light">
-                        <th>Air Réf</th>
-                        <th>Departure</th>
-                        <th>Arrivé</th>
-                        <th>l’heure départ</th>
-                        <th>l’heure d’arrivé</th>
-                        <th>date de départ</th>
-                        <th>date d'Arrivé</th>
-                        <th>Nombre de places</th>
-                        <th>escales</th>
-                        <th>Order</th>
-                    </thead>
-                    <tbody>
-                        <% rows.forEach(function(row){ %>
-                            <tr>
-                                <th scope="row border"><%= row.id_airplane %>
-                                </th>
-                                <td>
-                                    <%= row.Départ %>
-                                </td>
-                                <td>
-                                    <%= row.Arrivé %>
-                                </td>
-                                <td>
-                                    <%= row.heure_départ %>
-                                </td>
-                                <td>
-                                    <%= row.heure_arrivé %>
-                                </td>
-                                <td>
-                                    <%= row.date_départ %>
-                                </td>
-                                <td>
-                                    <%= row.date_arrivé %>
-                                </td>
-                                <td>
-                                    <%= row.num_place %>
-                                </td>
-                                <td>
-                                    <% if(row.escale === 1){ %>
-                                        <p>Escaled in <%= row.escale_place%></p>
-                                    <% } else{ %>
-                                        <p>Direct(No Escale)</p>
-                                    <% } %>
-                                </td>
-                                <td class="center hidden-phone btn btn-light">
-                                    <a href="/reservation/<%= row.id_airplane %>" class="btn btn-outline btn-sm">Order Ticket Now</a>
-                            </tr>
-                            <% }); %>
-                    </tbody>
-                </table>
-            </div>
-            <div class="row" style="height: 400px;">
-            </div>
-        </div>
-    </div>
-    <!-- popular_destination_area_end  -->
-   
+
+        </form>
+
     <footer class="footer">
         <div class="footer_top">
             <div class="container">
@@ -189,7 +137,7 @@
                         <div class="footer_widget">
                             <div class="footer_logo">
                                 <a href="#">
-                                    <img class="logo" src="img/footer_logo.png" alt="">
+                                    <img class="logo" src="/img/footer_logo.png" alt="">
                                 </a>
                             </div>
                             <p>5th flora, 700/D kings road, green <br> lane New York-1782 <br>
@@ -266,32 +214,32 @@
                             <div class="instagram_feed">
                                 <div class="single_insta">
                                     <a href="#">
-                                        <img src="img/instagram/1.png" alt="">
+                                        <img src="/img/instagram/1.png" alt="">
                                     </a>
                                 </div>
                                 <div class="single_insta">
                                     <a href="#">
-                                        <img src="img/instagram/2.png" alt="">
+                                        <img src="/img/instagram/2.png" alt="">
                                     </a>
                                 </div>
                                 <div class="single_insta">
                                     <a href="#">
-                                        <img src="img/instagram/3.png" alt="">
+                                        <img src="/img/instagram/3.png" alt="">
                                     </a>
                                 </div>
                                 <div class="single_insta">
                                     <a href="#">
-                                        <img src="img/instagram/4.png" alt="">
+                                        <img src="/img/instagram/4.png" alt="">
                                     </a>
                                 </div>
                                 <div class="single_insta">
                                     <a href="#">
-                                        <img src="img/instagram/5.png" alt="">
+                                        <img src="/img/instagram/5.png" alt="">
                                     </a>
                                 </div>
                                 <div class="single_insta">
                                     <a href="#">
-                                        <img src="img/instagram/6.png" alt="">
+                                        <img src="/img/instagram/6.png" alt="">
                                     </a>
                                 </div>
                             </div>
@@ -301,6 +249,9 @@
             </div>
         </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -51,7 +51,9 @@ app.get('/', (req, res) => {
 app.post('/view', (req, res) => {
   let Départ = req.body.Départ;
   let Arrivé = req.body.Arrivé;
-  const sql = "SELECT *  FROM `airplane` WHERE `Départ` = '"+Départ+"' and `Arrivé`= '"+Arrivé+"' and `num_place`> '"+20+"'";
+  let date_départ = req.body.date_départ;
+  let heure_départ = req.body.heure_départ;
+  const sql = "SELECT *  FROM `airplane` WHERE `Départ` = '"+Départ+"' and `Arrivé`= '"+Arrivé+"' and `num_place`> '"+20+"'and `date_départ`= '"+date_départ+"'and `heure_départ`= '"+heure_départ+"'";
   Database.query(sql, (err, rows) => {
       console.log(rows);
          if (err) throw err;

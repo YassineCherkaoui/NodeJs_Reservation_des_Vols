@@ -93,12 +93,18 @@
                 </div>
                 <div class="col-lg-9">
                     <div class="search_wrap">
-                        <form action="/view" method="POST">
-                            <div class="input_field" style="margin-right: 70px;">
+                        <form action="/view" method="POST" class="form" style="display: flex;inline-size: max-content;">
+                            <div class="input_field">
                                 <input type="text" placeholder="Where to go?" name="Départ">
                             </div>
                             <div class="input_field">
-                                <input id="datepicker" placeholder="TO" name="Arrivé">
+                                <input id="datepicker" placeholder="TO" name="Arrivé"type="text"> 
+                            </div>
+                            <div class="input_field">
+                                <input type="text" name="date_départ" placeholder="YYYY-MM-DD" min="2021-2-27" max="2021-12-31">
+                            </div>
+                            <div class="input_field">
+                                <input id="appt-datepicker" type="time" name="heure_départ-time" step="2">
                             </div>
 
                             <div class="search_btn">

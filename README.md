@@ -56,16 +56,12 @@ Lien Github de votre application web et base de données
 ![File_Text](https://github.com/YassineCherkaoui/NodeJs_Reservation_des_Vols/blob/main/Output/File_Text.PNG)
 ![Email](https://github.com/YassineCherkaoui/NodeJs_Reservation_des_Vols/blob/main/Output/Email.PNG)
 
-## Capture d'écran de l'application
+## Capture d'écran de Trello
 
-![home](https://github.com/YassineCherkaoui/NodeJs_Reservation_des_Vols/blob/main/Output/Home.png)
-![Home_after_search](https://github.com/YassineCherkaoui/NodeJs_Reservation_des_Vols/blob/main/Output/Home_after_search.png)
-![Reservation](https://github.com/YassineCherkaoui/NodeJs_Reservation_des_Vols/blob/main/Output/Reservation.png)
-![Confirmation](https://github.com/YassineCherkaoui/NodeJs_Reservation_des_Vols/blob/main/Output/Confirmation.png)
-![Payment](https://github.com/YassineCherkaoui/NodeJs_Reservation_des_Vols/blob/main/Output/Payment.png)
-![Message_Final](https://github.com/YassineCherkaoui/NodeJs_Reservation_des_Vols/blob/main/Output/Message_Final.png)
-![File_Text](https://github.com/YassineCherkaoui/NodeJs_Reservation_des_Vols/blob/main/Output/File_Text.PNG)
-![Email](https://github.com/YassineCherkaoui/NodeJs_Reservation_des_Vols/blob/main/Output/Email.PNG)
+![1](https://github.com/YassineCherkaoui/NodeJs_Reservation_des_Vols/blob/main/Trello/soci%C3%A9t%C3%A9_SafiAir%20_%20Trello-1.jpg)
+![2](https://github.com/YassineCherkaoui/NodeJs_Reservation_des_Vols/blob/main/Trello/soci%C3%A9t%C3%A9_SafiAir%20_%20Trello-2.jpg)
+![3](https://github.com/YassineCherkaoui/NodeJs_Reservation_des_Vols/blob/main/Trello/soci%C3%A9t%C3%A9_SafiAir%20_%20Trello-3.jpg)
+
 
 ## Référentiels
 

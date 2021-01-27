@@ -31,12 +31,8 @@ app.use(express.static(publicDirectory));
 
 
 
+//Index Direction__________________________________________________________________________________________________________________________
 
-
-
-// app.use("/view",availble_flight);
-// app.use("/view",client);
-//Index Direction
 app.get('/', (req, res) => {
     const sql = "SELECT * FROM airplane";
     Database.query(sql, (err, rows) => {
@@ -51,6 +47,7 @@ app.get('/', (req, res) => {
    
    });
 
+//Display After Search______________________________________________________________________________________________________________________
 app.post('/view', (req, res) => {
   let Départ = req.body.Départ;
   let Arrivé = req.body.Arrivé;
@@ -66,7 +63,8 @@ app.post('/view', (req, res) => {
      })
  
  });
- // Reservation
+
+ // Reservation______________________________________________________________________________________________________________________________
  
 app.get('/reservation/:id_airplane/', (req, res) => {
     let id_airplane  = req.params.id_airplane;
@@ -87,9 +85,8 @@ app.get('/reservation/:id_airplane/', (req, res) => {
        })
 
 });
-// app.get('/404', (req, res) => {
-// res.render('404')
-// });
+//Reservation Get Data airplane______________________________________________________________________________________________________________________________
+ 
     app.post("/reservation/:id_airplane", (req, res) => {
         let id_airplane  = req.params.id_airplane;
         const sql = `Select * from airplane where id_airplane = ${id_airplane}` ;
@@ -117,7 +114,8 @@ app.get('/reservation/:id_airplane/', (req, res) => {
         });
 
     });
-
+//Reservation______________________________________________________________________________________________________________________________
+ 
     app.post('/reservation/:id_airplane', (req, res) => {
         let id_airplane  = req.params.id_airplane;
          const sql = `Select * from airplane where id_airplane = ${id_airplane}` ;
@@ -146,7 +144,8 @@ app.get('/reservation/:id_airplane/', (req, res) => {
                });
             });
     });
-
+//Confirmation______________________________________________________________________________________________________________________________
+ 
 
     app.post('/confirmation/:id_airplane', (req, res) => {
         let id_client  = req.body.id_client;
@@ -184,6 +183,8 @@ app.get('/reservation/:id_airplane/', (req, res) => {
                 place_reservé : req.body.place_reservé
                 
                });
+     //EMail Part ______________________________________________________________________________________________________________________________
+ 
                let transport = nodemailer.createTransport({
                 service: "gmail",
                 auth: {
@@ -204,6 +205,7 @@ app.get('/reservation/:id_airplane/', (req, res) => {
                   console.log(info);
                 }
             });
+            //FILE_TEXT______________________________________________________________________________________________________________________________
                const source ="Email :{{email}} Name:{{nom}} prénom :{{prénom}} place_reservé :{{place_reservé}} Passport:{{Passport}} téléphone :{{téléphone}}";
     const template = Handlebars.compile(source);
 
@@ -221,23 +223,13 @@ fs.writeFile('Ticket_Text/Ticket.txt', contents, err => {
         return console.error(`Failed!! ${err.message}.`);
     }
 });
-// EMAIL _________________________________________________________________________________________
-
-
-
-
-
-
-
-
-
-//_________________________________________________________________________________________
             });
     });
 
 
 
-
+//Payment_Part______________________________________________________________________________________________________________________________
+ 
 app.post('/payment', (req, res) => {
     let id_airplane  = req.params.id_airplane;
         const sql = `Select * from airplane` ;
@@ -264,6 +256,9 @@ res.render('payment',{
             })
         })
 });
+
+//Payment_Get_Data______________________________________________________________________________________________________________________________
+ 
     app.post('/payment/:id_airplane', (req, res) => {
         let id_airplane  = req.params.id_airplane;
         const sql = `Select * from airplane` ;
@@ -288,13 +283,11 @@ res.render('payment',{
                 téléphone : req.body.téléphone,
                 Passport : req.body.Passport,
                 place_reservé : req.body.place_reservé
-
                });
-       
            })
-       
        });
-       //ezzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+
+       //Insert_Pyament_Data______________________________________________________________________________________________________________________________
 
        app.post('/paymen', (req, res) => {
         let id_Client  = req.body.code;

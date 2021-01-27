@@ -98,7 +98,7 @@ Maintenant, les étapes suivantes comment connecter la base de données
 
 Étape 5: installez Apache (Xampp / wamp).
 Étape 6: Ouvrez un navigateur et accédez à l'URL "http://localhost/phpmyadmin/".
-Étape 8: Créez une base de données nommant "GestionFormations" puis cliquez sur l'onglet d'importation
+Étape 8: Créez une base de données nommant "Flight_Booking" puis cliquez sur l'onglet d'importation
 Étape 9: Cliquez sur parcourir le fichier et sélectionnez le fichier "reservation_de_vols.sql qui se trouve dans le dossier
 Étape 10: Cliquez sur aller.
 

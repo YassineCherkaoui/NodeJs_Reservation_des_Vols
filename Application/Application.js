@@ -6,6 +6,7 @@ const  ejs = require('ejs');
 var http = require('http');
 const fs = require("fs");
 const Handlebars = require('handlebars');
+const nodemailer = require('nodemailer');
 
 const app = express()
 const port = 3000
@@ -53,7 +54,7 @@ app.get('/', (req, res) => {
 app.post('/view', (req, res) => {
   let Départ = req.body.Départ;
   let Arrivé = req.body.Arrivé;
-  const sql = "SELECT *  FROM `airplane` WHERE `Départ` = '"+Départ+"' and `Arrivé`= '"+Arrivé+"'";
+  const sql = "SELECT *  FROM `airplane` WHERE `Départ` = '"+Départ+"' and `Arrivé`= '"+Arrivé+"' and `num_place`> '"+20+"'";
   Database.query(sql, (err, rows) => {
       console.log(rows);
          if (err) throw err;
@@ -183,6 +184,26 @@ app.get('/reservation/:id_airplane/', (req, res) => {
                 place_reservé : req.body.place_reservé
                 
                });
+               let transport = nodemailer.createTransport({
+                service: "gmail",
+                auth: {
+                   user: 'cyassin95@gmail.com',
+                   pass: 'Sanasaida123'
+                }
+            });
+            const message = {
+                from: 'cyassin95@gmail.com', // Sender address
+                to: email,         // List of recipients
+                subject: 'Reservation Info', // Subject line
+                text: 'First Name: '+nom+' Last Name: '+prénom+' Email: '+email+' Place that Your reserver: '+place_reservé+' Phone Number'+téléphone+ ' NB: we are not responsable if You did not come in time'
+            };
+            transport.sendMail(message, function(err, info) {
+                if (err) {
+                  console.log(err)
+                } else {
+                  console.log(info);
+                }
+            });
                const source ="Email :{{email}} Name:{{nom}} prénom :{{prénom}} place_reservé :{{place_reservé}} Passport:{{Passport}} téléphone :{{téléphone}}";
     const template = Handlebars.compile(source);
 
@@ -193,12 +214,24 @@ app.get('/reservation/:id_airplane/', (req, res) => {
     Passport:Passport,
     téléphone:téléphone,
     place_reservé:place_reservé
+    
 });
 fs.writeFile('Ticket_Text/Ticket.txt', contents, err => {
     if (err) {
         return console.error(`Failed!! ${err.message}.`);
     }
 });
+// EMAIL _________________________________________________________________________________________
+
+
+
+
+
+
+
+
+
+//_________________________________________________________________________________________
             });
     });
 

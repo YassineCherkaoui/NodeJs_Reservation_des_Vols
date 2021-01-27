@@ -90,17 +90,17 @@
                                         <%= row.date_arrivé %>
                                     </td>
                                     <td>
-                                        <%= row.num_place %>
+                                         row.num_place %>
                                     </td>
                                     <td>
                                         <% if(row.escale === 1){ %>
-                                            <p>Escaled in <%= row.escale_place%></p>
+                                            <p>Escaled</p>
                                         <% } else{ %>
                                             <p>Direct(No Escale)</p>
                                         <% } %>
                                     </td>
                                     <td class="center hidden-phone">
-                                        <a href="/reservation/<%= row.id_airplane %>" class="btn btn-outline btn-sm">Order Ticket Now</a>
+                                        <a href="/Client/addclient/" class="btn btn-outline btn-sm">Order Ticket Now</a>
                                 </tr>
                                 <% }); %>
                         </tbody>

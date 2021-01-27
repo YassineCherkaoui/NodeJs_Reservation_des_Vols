@@ -13,7 +13,6 @@ const port = 3000
 const Database = require("./db_Connection");
 // Routes
 const availble_flight = require("./Routes/availble_flight");
-const client = require("./Routes/Client");
 
 
 
@@ -28,7 +27,6 @@ app.use(express.static(publicDirectory));
 
 //Routes
 app.use("/view",availble_flight);
-app.use("/view",client);
 //Index Direction
 app.get('/', (req, res) => {
     const sql = "SELECT * FROM airplane";
@@ -44,6 +42,18 @@ app.get('/', (req, res) => {
    
    });
 
+//    app.post('/view', function(req,res){
+//     Database.serialize(()=>{
+//         Database.each('SELECT Départ,Arrivé  FROM airplane WHERE Départ =?,Arrivé =?', [req.body.Départ][req.body.Arrivé][req.body.heure_départ][req.body.heure_arrivé][req.body.date_départ][req.body.date_arrivé], function(err,row){
+//       if(err){
+//         res.send("Error encountered while displaying");
+//         return console.error(err.message);
+//       }
+//       res.send(` Départ: ${row.Départ},    Arrivé: ${row.Arrivé},    heure_départ: ${row.heure_départ},    heure_arrivé: ${row.heure_arrivé},    date_départ: ${row.date_départ},    date_arrivé: ${row.v},    num_place: ${row.num_place}`);
+//       console.log("Entry displayed successfully");
+//     });
+//   });
+// });
 app.post('/view', (req, res) => {
   let Départ = req.body.Départ;
   let Arrivé = req.body.Arrivé;
@@ -59,46 +69,22 @@ app.post('/view', (req, res) => {
      })
  
  });
- // Reservation
- 
-app.get('/reservation/:id_airplane', (req, res) => {
-    const sql = "SELECT *  FROM `airplane`";
-    Database.query(sql, (err, rows) => {
-        console.log(rows);
-           if (err) throw err;
-           res.render('reservation', {
-            title : 'reservation',
-            rows: rows
-           });
-   
-       })
+// app.post("/view", (req, res) => {
 
-});
-app.get('/404', (req, res) => {
-res.render('404')
-});
-    app.post("/reservation/:id_airplane", (req, res) => {
-        let id_airplane  = req.body.id_airplane;
-        let code = req.body.code;
-        let nom = req.body.nom;
-        let prénom = req.body.prénom;
-        let email = req.body.email;
-        let téléphone = req.body.téléphone;
-        let Passport = req.body.Passport;
-        let place_reservé = req.body.place_reservé;
-        let query = "INSERT INTO `client` (`id_airplane`, `code`, `nom`, `prénom`, `email`, `téléphone`, `Passport`, `place_reservé`) VALUES ('" + id_airplane + "','" + code + "','" + nom + "','" + prénom + "','" + email + "','" + téléphone + "','" + Passport + "','" + place_reservé + "')";
-        Database.query(query, (err, rows) => {
-            if (err) {
-                res.render('404',{
-                    title : '404'
-                });
-            }
-            res.render('payment',{
-                rows: rows
-            });
-        });
+//   let Départ = req.body.Départ;
+//   let Arrivé = req.body.Arrivé;
 
-    });
+
+//   let query = "SELECT *  FROM `airplane` WHERE `Départ` = '"+Départ+"' and `Arrivé`= '"+Arrivé+"'";
+//   Database.query(query, (err,rows)=> {
+//       if (err) {
+//           return res.status(500).send(err);
+//       }
+//     res.send(` Départ: ${rows.Départ},    Arrivé: ${rows.Arrivé}`);
+//   });
+
+// });
+
 
 
 

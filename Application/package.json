@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm app.js"
   },
-  "author": "Yassine Cherkaoui and Mohamed Oubohia and Smail Kaddi",
+  "author": "Yassine Cherkaoui and Mohamed Oubouhia and Smail Kaddi",
   "license": "ISC",
   "dependencies": {
     "-": "0.0.1",

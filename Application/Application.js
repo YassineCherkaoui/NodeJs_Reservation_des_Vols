@@ -191,11 +191,11 @@ app.get('/reservation/:id_airplane/', (req, res) => {
                 service: "gmail",
                 auth: {
                    user: '',//Mail
-                   pass: ''//password
+                   pass: ''//Password
                 }
             });
             const message = {
-                from: 'cyassin95@gmail.com', // Sender address
+                from: 'tt951920@gmail.com', // Sender address
                 to: email,         // List of recipients
                 subject: 'Reservation Info', // Subject line
                 text: 'First Name: '+nom+' Last Name: '+prénom+' Email: '+email+' Place that Your reserver: '+place_reservé+' Phone Number'+téléphone+ ' NB: we are not responsable if You did not come in time'

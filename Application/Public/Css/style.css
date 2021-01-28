@@ -26,6 +26,17 @@ body {
 .card-title{
   padding: 10px;
 }
+.card-body{
+  background-color: #040e27;
+color: white;
+width: 60%;
+margin: 30px;
+margin-left: 20%;
+}
+.card-body h5{
+  color: white;
+  text-align: left;
+}
 
 /* line 13, ../../Arafath/CL/December/231. Travel-02/HTML/scss/theme-default.scss */
 .img {
@@ -872,6 +883,30 @@ h3 {
     display: none !important;
   }
 }
+@media (max-width: 811px) {
+  /* line 124, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_header.scss */
+  .form {
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .input_field{
+    padding: 10px;
+  }
+  .where{
+    text-align: center;
+    color: white;
+  }
+}
+.where{
+  color: white;
+
+}
+.logoheader{
+  width: 20%;
+  height: auto;
+}
 
 @media (min-width: 768px) and (max-width: 991px) {
   /* line 124, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_header.scss */
@@ -942,6 +977,14 @@ h3 {
 /* line 204, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_header.scss */
 .header-area .main-header-area .main-menu ul li:first-child a {
   padding-left: 0;
+}
+.confir{
+  display: flex;
+}
+.ticket{
+  width: 90%;
+  height: 423px;
+  margin-left: 23px;
 }
 
 /* line 210, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_header.scss */
@@ -2534,14 +2577,12 @@ h3 {
 /* line 1, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_destination.scss */
 .popular_destination_area {
   padding-top: 40px;
-  padding-bottom: 40px;
 }
 
 @media (max-width: 767px) {
   /* line 1, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_destination.scss */
   .popular_destination_area {
     padding-top: 60px;
-    padding-bottom: 30px;
   }
 }
 

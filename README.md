@@ -62,7 +62,6 @@ Lien Github de votre application web et base de données
 ![2](https://github.com/YassineCherkaoui/NodeJs_Reservation_des_Vols/blob/main/Trello/soci%C3%A9t%C3%A9_SafiAir%20_%20Trello-2.jpg)
 ![3](https://github.com/YassineCherkaoui/NodeJs_Reservation_des_Vols/blob/main/Trello/soci%C3%A9t%C3%A9_SafiAir%20_%20Trello-3.jpg)
 
-
 ## Référentiels
 
 Développeur⋅se web et web mobile
@@ -90,6 +89,9 @@ Pour Exécuter ce Projet, vous devez suivre ces étapes :
 Étape 2: Extraire le fichier.
 Étape 3: Ouvrez le dossier avec Nimporte quel IDE (VScode / notepad .....)
 Étape 4: installez node-module avec cette commande << npm install --save >>.
+'npm install nodemailer --save'
+'npm install handlebars --save'
+'npm install fs --save'
 ```
 
 Maintenant, les étapes suivantes comment connecter la base de données

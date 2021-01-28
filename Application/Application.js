@@ -190,8 +190,8 @@ app.get('/reservation/:id_airplane/', (req, res) => {
                let transport = nodemailer.createTransport({
                 service: "gmail",
                 auth: {
-                   user: 'cyassin95@gmail.com',
-                   pass: 'Sanasaida123'
+                   user: '',//Mail
+                   pass: ''//password
                 }
             });
             const message = {

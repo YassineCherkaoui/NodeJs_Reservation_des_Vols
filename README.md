@@ -62,7 +62,9 @@ Lien Github de votre application web et base de données
 ![2](https://github.com/YassineCherkaoui/NodeJs_Reservation_des_Vols/blob/main/Trello/soci%C3%A9t%C3%A9_SafiAir%20_%20Trello-2.jpg)
 ![3](https://github.com/YassineCherkaoui/NodeJs_Reservation_des_Vols/blob/main/Trello/soci%C3%A9t%C3%A9_SafiAir%20_%20Trello-3.jpg)
 
-## Référentiels
+## Diagramme
+![Diagramme de class](https://github.com/YassineCherkaoui/NodeJs_Reservation_des_Vols/blob/main/Trello/soci%C3%A9t%C3%A9_SafiAir%20_%20Trello-3.jpg)
+## Référentiels 
 
 Développeur⋅se web et web mobile
 Concepteur⋅rice développeur⋅se d'applications
